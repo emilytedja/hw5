@@ -1,9 +1,17 @@
-function Preload() {
+let img;
+let chriping;
+
+function preload () {
+  img = loadImage ('th.jpg');
+  
+  chirping = loadSound("Bird.mp3");
 }
 
 function setup() {
   createCanvas(400, 400);
   noStroke ();
+  textSize(30);
+  chirping. play();
 }
 
 
@@ -16,16 +24,12 @@ function draw() {
   
   fill(0);
   ellipse (225, 190, 70);
-  ellipse(mouseX, mouseY, 30, 50);
-}
 
-function mouseReleased() {
-  
-  if (mouseY < height);
-   mouseY = -mouseY
-  
-}
+  image(img, mouseX, mouseY);
 
-function mousePressed() {
-  text ("Tweet!", 20, 40);
+ if (mouseIsPressed) { 
+
+  text ("Tweet!", 100, 100);
+  
+ }
 }
