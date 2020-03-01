@@ -1,0 +1,31 @@
+function Preload() {
+}
+
+function setup() {
+  createCanvas(400, 400);
+  noStroke ();
+}
+
+
+function draw() {
+  background(220);
+  
+  fill (250);
+  rect( 150, 150, 150, 200);
+  triangle( 150, 150, 225, 90, 300, 150); 
+  
+  fill(0);
+  ellipse (225, 190, 70);
+  ellipse(mouseX, mouseY, 30, 50);
+}
+
+function mouseReleased() {
+  
+  if (mouseY < height);
+   mouseY = -mouseY
+  
+}
+
+function mousePressed() {
+  text ("Tweet!", 20, 40);
+}
