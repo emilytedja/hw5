@@ -1,8 +1,11 @@
+var x = 225;
+var y = 190;
+var r = 70;
 let img;
 let chriping;
 
 function preload () {
-  img = loadImage ('th.jpg');
+  img = loadImage ('Bird.png');
   
   chirping = loadSound("Bird.mp3");
 }
@@ -19,18 +22,22 @@ function setup() {
 function draw() {
   background(220);
   
-  fill (250);
+  noStroke();
+  fill (35, 64,153);
   rect( 150, 150, 150, 200);
   triangle( 150, 150, 225, 90, 300, 150); 
   
   fill(0);
-  ellipse (225, 190, 70);
 
-  image(img, mouseX, mouseY);
-
- if (mouseIsPressed) { 
-
-  text ("Tweet!", 100, 100);
+  if (dist(x, y, mouseX, mouseY) < r / 2){
+    if (mouseIsPressed) { 
+      text ("Tweet!", 100, 100);
+    }
+    stroke(255);
+  } else{
+    noStroke();
+  }
+   ellipse (x, y, r) ;
   
- }
+  image(img, mouseX-100, mouseY-90);
 }
