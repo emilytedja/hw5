@@ -1,11 +1,16 @@
 var x = 225;
 var y = 190;
 var r = 70;
+var moveX = -400;
+var moveXSpeed = 5;
+var y2 = -120;
 let img;
+let img2;
 let chriping;
 
 function preload () {
   img = loadImage ('Bird.png');
+  img2 = loadImage ('flipped.png')
   
   chirping = loadSound("Bird.mp3");
 }
@@ -21,6 +26,15 @@ function setup() {
 
 function draw() {
   background(220);
+  
+  image(img2, moveX, -120);
+  
+  moveX = moveX + 5;
+  
+  if (moveX > width * 3 ){
+    
+    moveX = -400
+  }
   
   noStroke();
   fill (35, 64,153);
